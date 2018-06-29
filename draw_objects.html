@@ -7,15 +7,24 @@
     <title>Document</title>
 </head>
 <body>
+    <canvas height="500" width="500" style="border: 2px solid #000000" id="ctx"/>
     <script>
-    
-    var car = {
-        maxSpeed: 130,
-        seatCount: 5,
-        height: 54
+
+    const ctx = document.getElementById("ctx").getContext("2d");
+
+    let square = {
+        width: 200,
+        height: 200,
+        x: 100,
+        y: 200,
+        color: "red"
     };
 
-    
+    ctx.save();
+
+    ctx.fillStyle = square.color;
+    ctx.fillRect(square.x,square.y,square.width,square.height);
+    ctx.restore();
     
     </script>    
 </body>
